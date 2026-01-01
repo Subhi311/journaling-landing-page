@@ -18,7 +18,7 @@ This project focuses on clean UI design, smooth interactions, and core frontend 
 - VS Code
 
 ## 🌐 Live Demo
-👉 ttps://subhi311.github.io/journaling-landing-page/
+👉 https://subhi311.github.io/journaling-landing-page/
 
 ## 📸 Preview
 A clean, minimal journaling-inspired layout with interactive image grid and theme toggle.

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journaling- My Hobby 📓</title>
+    <style>
+      img {
+        width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        background: linear-gradient(
+          to top,
+          #fdcbf1 0%,
+          #fdcbf1 1%,
+          #e6dee9 100%
+        );
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .container {
+        margin: 20px auto; /*To center*/
+        max-width: 600px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+      }
+
+      button {
+        color: white;
+        padding: 15px 20px;
+
+        display: block;
+        margin: 20px auto;
+
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 30px 30px;
+
+        font-weight: bold;
+      }
+
+      button:hover {
+        color: black;
+        background: white;
+        cursor: pointer;
+
+        border: 2px solid black;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0px;
+        font-size: 18px;
+      }
+
+      .dark-button {
+        background: white;
+        color: black;
+      }
+
+      .dark-mode {
+        background: radial-gradient(
+          circle at 24.1% 68.8%,
+          rgb(50, 50, 50) 0%,
+          rgb(0, 0, 0) 99.4%
+        );
+      }
+
+      .dark-footer {
+        color: white;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .grid img {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+
+      .grid img:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button>Dark Theme</button>
+    <div class="container">
+      <h1>Journaling</h1>
+      <h2>My favorite hobby</h2>
+      <div class="grid">
+        <img
+          src="https://images.pexels.com/photos/6541167/pexels-photo-6541167.jpeg"
+          alt="Person writing in a journal."
+          class="imageOne"
+        />
+        <img
+          src="https://images.pexels.com/photos/6541164/pexels-photo-6541164.jpeg"
+          alt="Person writing in a journal."
+          class="imageTwo"
+        />
+        <img
+          src="https://images.pexels.com/photos/35378157/pexels-photo-35378157.jpeg"
+          alt="Minimal journal layout with pen and notebook on a light surface"
+          class="imageThree"
+        />
+        <img
+          src="https://images.pexels.com/photos/35378158/pexels-photo-35378158.jpeg"
+          alt="Notebook open with aesthetic journaling setup and soft lighting"
+          class="imageFour"
+        />
+      </div>
+      <p>
+        Journaling is the practice of regularly writing down your thoughts,
+        feelings, experiences, and reflections to boost self-awareness, manage
+        stress, track goals, and process emotions, serving as a powerful tool
+        for mental wellness and personal growth, done by hand or digitally,
+        focusing on daily events, dreams, or specific gratitude. It's a
+        versatile habit, from quick daily notes to deep emotional exploration,
+        helping you understand your inner world better.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Diary" target="_blank"
+        >📃 Read on wikipedia</a
+      >
+      <br />
+      <br />
+      <button class="learn">Learn Journaling</button>
+    </div>
+    <footer>
+      Coded with ❤️ by
+      <a
+        href="https://www.linkedin.com/in/subhi-srivastava-a882a6315?utm_source=share&utm_campaign=share_via&utm_c"
+        target="_blank"
+        >Subhi Srivastava</a
+      >
+    </footer>
+    <script>
+      function details() {
+        let name = prompt("Hey there! What's your name?");
+        let statement = `Hello ${name}. What brings you to journaling?`;
+        prompt(statement);
+
+        let finalWord = `That's nice to hear. One entry at a time, you're building a clearer mind. Keep journaling and keep improving. 🐻`;
+        alert(finalWord);
+      }
+      function turnBlack() {
+        document.body.classList.toggle("dark-mode");
+
+        let darkButton = document.querySelector("button");
+        darkButton.classList.toggle("dark-button");
+
+        let darkFooter = document.querySelector("footer");
+        darkFooter.classList.toggle("dark-footer");
+      }
+
+      let blackTheme = document.querySelector("button");
+      blackTheme.addEventListener("click", turnBlack);
+
+      let learn = document.querySelector(".learn");
+      learn.addEventListener("click", details);
+    </script>
+  </body>
+</html>
